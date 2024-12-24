@@ -160,7 +160,7 @@ function App() {
     e.preventDefault();
   };
 
-  const handleDrop = (e: React.DragEvent, targetSource: string, targetIndex: number) => {
+  const handleDrop = (e: React.DragEvent, targetSource: string) => {
     e.preventDefault();
     if (!draggedCards) return;
 
@@ -238,7 +238,7 @@ function App() {
           <Pile
             key={i}
             onDragOver={handleDragOver}
-            onDrop={(e) => handleDrop(e, `foundation-${i}`, foundation.length)}
+            onDrop={(e) => handleDrop(e, `foundation-${i}`)}
           >
             {foundation.length > 0 && (
               <CardComponent
@@ -256,7 +256,7 @@ function App() {
           <Pile
             key={i}
             onDragOver={handleDragOver}
-            onDrop={(e) => handleDrop(e, `tableau-${i}`, tableau.length)}
+            onDrop={(e) => handleDrop(e, `tableau-${i}`)}
           >
             {tableau.map((card, j) => (
               <CardComponent
