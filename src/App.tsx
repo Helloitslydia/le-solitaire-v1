@@ -45,49 +45,52 @@ const Dedication = styled.div`
 
 const TopSection = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 
   @media (max-width: 768px) {
-    gap: 10px;
+    gap: 20px;
+    margin-bottom: 20px;
   }
 
   @media (max-width: 480px) {
-    gap: 5px;
+    gap: 10px;
+    margin-bottom: 15px;
   }
 `;
 
 const TableauSection = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
-    gap: 10px;
+    gap: 20px;
   }
 
   @media (max-width: 480px) {
-    gap: 5px;
+    gap: 10px;
   }
 `;
 
 const Pile = styled.div<{ isDropTarget?: boolean }>`
-  min-width: 100px;
-  min-height: 140px;
+  min-width: 120px;
+  min-height: 168px;
   border: 2px dashed ${props => props.isDropTarget ? '#ffff00' : '#ffffff55'};
   border-radius: 10px;
   position: relative;
 
   @media (max-width: 768px) {
-    min-width: 70px;
-    min-height: 98px;
+    min-width: 90px;
+    min-height: 126px;
   }
 
   @media (max-width: 480px) {
-    min-width: 50px;
-    min-height: 70px;
+    min-width: 70px;
+    min-height: 98px;
   }
 `;
 
